@@ -8,96 +8,69 @@
 /* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #4a90e2, #830bf3);
-    color: #fff;
+    background: linear-gradient(120deg, #4a90e2, #830bf3); /* Gradient background */
+    color: #fff; /* Text color */
+    display: flex; /* Use flexbox for layout */
 }
 
 /* Navigation panel styling */
 nav {
-    background-color: #4a90e2;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    height: 100%;
-    width: 230px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    transition: width 0.3s ease;
+    background-color: #4a90e2; /* Navigation panel color */
+    padding: 15px; /* Space around links */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    position: fixed; /* Fix navigation to the left */
+    height: 100%; /* Full height */
+    width: 230px; /* Width of navigation */
+    overflow-y: auto; /* Ensures scroll if content overflows */
+    display: flex; /* Flexbox for vertical layout */
+    flex-direction: column; /* Stack elements vertically */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    nav {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        overflow-x: auto;
-    }
-    .container {
-        margin-left: 0;
-        padding: 20px;
-    }
+
+/* Style for active page link in navigation */
+.nav-container a.active {
+    font-weight: bold; /* Make the text bold */
+    color: #ffd700; /* Optional: change color to highlight */
+    background-color: rgba(255, 255, 255, 0.3); /* Optional: subtle background */
+    border-radius: 8px; /* Match other nav links */
 }
+
+
+
 
 /* Container styling */
 .container {
     max-width: 800px;
-    margin-left: 240px;
-    margin-top: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    margin-left: 240px; /* Leave space for fixed nav panel */
+    margin-top: 0; /* Remove margin-top to prevent overlap */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for content */
     padding: 30px;
     border-radius: 10px;
-    min-height: calc(110vh - 60px);
-}
-
-@media (max-width: 768px) {
-    .container {
-        margin: 0;
-        padding: 20px;
-    }
+    min-height: calc(110vh - 60px); /* Ensures content fills remaining space */
 }
 
 /* Profile picture styling */
 .profile-pic {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 50%; /* Circular profile picture */
     object-fit: cover;
 }
 
 /* About page image styling for side image */
 .about-pic {
-    width: 200px;
+    width: 200px; /* Adjust the size to your preference */
     height: 200px;
-    border-radius: 50%;
+    border-radius: 50%; /* Circular image */
     object-fit: cover;
-    margin-left: 20px;
-    float: right;
-}
-
-@media (max-width: 768px) {
-    .about-pic {
-        width: 150px;
-        height: 150px;
-        float: none;
-        margin: 0 auto;
-        display: block;
-    }
+    margin-left: 20px; /* Add space between image and text */
+    float: right; /* Aligns image to the right side of the content */
 }
 
 /* Heading styles */
 h1 {
     font-size: 2.5rem;
     color: #fff;
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
 }
 
 /* Paragraph styling */
@@ -107,134 +80,170 @@ p {
     color: #ddd;
 }
 
-@media (max-width: 768px) {
-    p {
-        font-size: 1.1rem;
-    }
-}
-
 /* Social link icons */
 .social-links {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: 20px; /* Space above social links */
 }
 
 .social-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 2rem;
-    color: #fff;
+    margin: 0 10px; /* Space between icons */
+    text-decoration: none; /* No underline */
+    font-size: 2rem; /* Icon size */
+    color: #fff; /* Icon color */
 }
 
 .social-links a:hover {
-    color: #ffdd57;
+    color: #ffdd57; /* Change icon color on hover */
 }
 
 /* Download resume button */
 .resume-button {
-    margin-top: 30px;
-    text-align: center;
+    margin-top: 30px; /* Space above button */
 }
 
 .resume-button a {
-    background-color: #ffdd57;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
+    background-color: #ffdd57; /* Button background color */
+    color: black; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-size: 1.2rem; /* Button font size */
 }
 
 .resume-button a:hover {
-    background-color: #f0c100;
+    background-color: #f0c100; /* Darker yellow on hover */
 }
 
 /* Navigation links */
 .nav-container {
-    max-width: 100%;
+    max-width: 100%; /* Full width */
     margin: 0;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* No bullets */
+    padding: 0; /* Remove default padding */
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Horizontal alignment of links */
+    flex-direction: column; /* Stack links vertically */
 }
 
 nav li {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Space between links */
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Text color for links */
+    text-decoration: none; /* No underline */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* Background color on hover */
 }
 
-/* Active navigation link */
+/* Style for active page link in navigation */
 .nav-container a.active {
-    font-weight: bold;
-    color: #ffd700;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
+    font-weight: bold; /* Make the text bold */
+    color: #ffd700; /* Optional: change color to highlight */
+    background-color: rgba(255, 255, 255, 0.3); /* Optional: subtle background */
+    border-radius: 8px; /* Match other nav links */
 }
 
 /* Skills Page Styling */
 .skills-section {
+    padding: 0px;
     padding-left: 200px;
     max-width: 800px;
     margin: auto;
-    padding-top: 20px;
-    min-height: calc(100vh - 60px);
     text-align: left;
+    padding-top: 20px; /* Adjust based on your nav height */
+    min-height: calc(100vh - 60px); /* Make sure all sections have the same minimum height */
+
 }
 
 .skills-section h1 {
     font-size: 2.6em;
     color: #ffffff;
-}
-
-@media (max-width: 768px) {
-    .skills-section {
-        padding: 20px;
-        text-align: center;
-    }
-    .skills-section h1 {
-        font-size: 2rem;
-    }
-}
-
-/* Portfolio Section */
-.portfolio-section {
-    padding-left: 200px;
-    max-width: 800px;
-    margin: auto;
-    padding-top: 20px;
-    min-height: calc(100vh - 60px);
+    margin-bottom: 10px;
     text-align: left;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    width: 100%;
+.skills-section p {
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
-@media (max-width: 768px) {
-    .portfolio-section {
-        padding: 20px;
-    }
+.skills-category {
+    margin-top: 20px;
+}
+
+.skills-category h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skills-category h2 i {
+    color: #4a90e2;
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.skills-category ul {
+    list-style: none;
+    padding-left: 25px;
+}
+
+.skills-category ul li {
+    font-size: 1.2em;
+    margin: 5px 0;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+/* Portfolio container */
+.portfolio-section {
+padding: 0px;
+padding-left: 200px;
+max-width: 800px;
+margin: auto;
+text-align: left;
+padding-top: 20px; /* Adjust based on your nav height */
+min-height: calc(100vh - 60px); /* Make sure all sections have the same minimum height */
+}
+
+.portfolio-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Grid layout for portfolio items */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
 }
 
 /* Portfolio items */
@@ -250,7 +259,24 @@ nav a:hover {
     text-align: center;
 }
 
-/* Modal Styling */
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Project label styling */
+.project-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 1115px;
+}
+
+/* Updated modal styling */
 .modal {
     display: none;
     position: fixed;
@@ -261,27 +287,69 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden; /* Prevents scrolling on the background */
 }
 
 .modal-content {
-    background-color: #000;
+    background-color: #000000;
     padding: 2rem;
     border-radius: 8px;
     width: 80%;
     max-width: 1100px;
-    height: 80vh;
-    overflow-y: auto;
+    height: 80vh; /* Set a fixed height to make it scrollable */
+    overflow-y: auto; /* Enable vertical scrolling */
     position: relative;
+    box-sizing: border-box; /* Ensures padding is within height */
 }
 
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%;
-        height: auto;
-        max-height: 80vh;
-    }
+/* Close button styling */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ff7f50;
 }
+
+/* Optional: Adjust content inside modal for readability */
+#project-details h2 {
+    color: #ff7f50; /* A contrasting color for headings */
+    margin-top: 0;
+}
+
+#project-details p, #project-details ul, #project-details img, #project-details a {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+#project-details img {
+    max-width: 100%; /* Ensures images don't overflow the modal */
+    border-radius: 5px;
+}
+
+/* Optional: Style links */
+#project-details a {
+    color: #ff7f50;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Courses section */
 .courses-section {
@@ -290,16 +358,28 @@ nav a:hover {
     max-width: 800px;
     margin: auto;
     text-align: left;
-    min-height: calc(100vh - 60px);
+    padding-top: 20px; /* Adjust based on your nav height */
+    min-height: calc(100vh - 60px); /* Make sure all sections have the same minimum height */
+    
 }
 
-@media (max-width: 768px) {
-    .courses-section {
-        padding: 20px;
-        padding-left: 0;
-        max-width: 100%;
-    }
+/* Courses container */
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
 }
+
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 
 /* Individual course item */
 .course-item {
@@ -317,9 +397,21 @@ nav a:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-    .course-item {
-        flex-direction: column;
-        text-align: center;
-    }
+/* Course icon */
+.course-item i {
+    font-size: 2rem;
+    color: #ff7f50;
+    margin-right: 1rem;
+}
+
+/* Course content */
+.course-content h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.course-content span {
+    font-size: 0.9rem;
+    color: #666;
 }
