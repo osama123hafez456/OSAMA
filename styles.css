@@ -26,21 +26,6 @@ nav {
     flex-direction: column; /* Stack elements vertically */
 }
 
-@media (max-width: 768px) {
-    nav {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        overflow-x: auto;
-    }
-    .container {
-        margin-left: 0;
-        padding: 20px;
-    }
-}
-
-
 
 /* Style for active page link in navigation */
 .nav-container a.active {
